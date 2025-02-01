@@ -1,2 +1,5 @@
-# preferences
-Personal Preferences and config files
+# Personal Preferences
+* config files
+* aliases
+* scripts
+* software
