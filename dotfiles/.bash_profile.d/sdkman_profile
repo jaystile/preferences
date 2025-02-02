@@ -1,0 +1,9 @@
+export JAVA_HOME=/home/jason/.sdkman/candidates/java/14.0.1-open
+export PATH=${JAVA_HOME}:${PATH}
+
+export GRADLE_HOME=/home/jason/.sdkman/candidates/gradle/6.3
+export PATH=${GRADLE_HOME}:${PATH}
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/${USER}/.sdkman"
+[[ -s "/home/${USER}/.sdkman/bin/sdkman-init.sh" ]] && source "/home/${USER}/.sdkman/bin/sdkman-init.sh"

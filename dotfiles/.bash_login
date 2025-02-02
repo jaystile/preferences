@@ -1,0 +1,3 @@
+mount --target /mnt/synology
+mount --target /mnt/home/
+. "$HOME/.cargo/env"

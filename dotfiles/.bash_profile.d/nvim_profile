@@ -1,0 +1,5 @@
+#################################################
+# Neovim NVIM
+#################################################
+export NVIM_HOME=/opt/nvim-linux64
+export PATH=${PATH}:${NVIM_HOME}/bin
