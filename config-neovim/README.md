@@ -3,11 +3,11 @@ My personal settings for neovim
 
 ## Setup
 For [Neovim](https://github.com/neovim/neovim):
-- [Install Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md#appimage-universal-linux-package) - note the AppImage seems to work best as Ubuntu lags behind.
+- See the setup/install_neovim.sh script for installation
 - See [the issue](https://github.com/wallw-bits/nvim-config/issues/1) regarding the automatic install
 - `pip install pynvim` (or pip3 if you like) for plugins using Python
 - clone the repo 
-- link clone  `ln -s ~/workspace/nvim-config ~/.config/nvim`
+- link clone  `ln -s ~/workspace/jaystile/preferences ~/.config/nvim`
 - ensure [powerline fonts](https://github.com/powerline/fonts) are installed and set in [iTerm2](https://www.iterm2.com/) or whatever terminal you use
 - if you want the same colorscheme in the terminal, check out [gruvbox-contrib](https://github.com/morhetz/gruvbox-contrib)
 
