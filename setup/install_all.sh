@@ -1,2 +1,6 @@
 #!/bin/bash
-echo "todo: update, upgrade, pyenv, pip install, neovim"
+../apt-update.sh
+
+echo "pyenv, pip install, neovim"
+
+./install_nvim.sh
