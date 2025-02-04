@@ -1,4 +1,4 @@
 #!/bin/bash 
 for bcfile in ~/.bash_completion.d/* ; do
-    . $bcfile
+	[ -f "$bcfile" ] && . $bcfile
 done
