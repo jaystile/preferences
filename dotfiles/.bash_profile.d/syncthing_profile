@@ -1,0 +1,4 @@
+#####################
+# Syncthing
+#####################
+export PATH=/opt/syncthing:${PATH}
