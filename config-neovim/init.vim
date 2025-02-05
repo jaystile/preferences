@@ -66,7 +66,7 @@ elseif v:progname == 'nvim'
   Plug 'tpope/vim-commentary'
 
   " Fuzzy file search
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'}
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   let g:fzf_command_prefix = 'Fzf'
 

@@ -25,10 +25,23 @@ All the `.vim` files should be well-commented, so have a look. Note that `init.v
 1. `vim tmp.txt` should download all the plugins
 1. `:PlugUpdate` to verify
 
+## Common
+`coc-json` is used to get syntax help while updating coc-settings.json
+   ```
+   :CocInstall coc-json
+   ```
+
 ## Go Development
 1. [vim-for-go-developement](https://pmihaylov.com/vim-for-go-development/)
    ```
    vim -c 'CocInstall -sync coc-go coc-html coc-css coc-json|q'
+   ```
+
+
+## Python Development
+1. [coc-pyright](https://github.com/fannheyward/coc-pyright)
+   ```
+   :CocInstall coc-pyright
    ```
 
 ## Rust Development
@@ -57,4 +70,5 @@ All the `.vim` files should be well-commented, so have a look. Note that `init.v
 	1. `next` as needed
 	1. `info locals`
 	1. `quit`
+
 
