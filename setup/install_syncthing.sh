@@ -17,12 +17,23 @@ function download() {
 function unpack() {
 	# extract and link the tar file
 	sudo tar -zxvf syncthing-linux-${ARCH}-${VERSION_TAG}.tar.gz
-	sudo ln -s syncthing-linux-${ARCH}-${VERSION_TAG} syncthing
+	sudo ln -fs syncthing-linux-${ARCH}-${VERSION_TAG} syncthing
 	
 }
-VERSION_TAG=v1.29.2
+
+function autostart() {
+	# automatically start syncthing as the user
+	mkdir -p ~/.config/systemd/user
+	sudo ln -fs /opt/syncthing/syncthing /usr/bin/syncthing
+	ln -fs /opt/syncthing/etc/linux-systemd/user/syncthing.service ~/.config/systemd/user/syncthing.service
+	systemctl --user enable syncthing.service
+	systemctl --user start syncthing.service
+	echo "Execute the following:"
+	echo "systemctl --user status syncthing.service"
+}
 
 pushd /opt
-# download
+download
 unpack
+autostart
 popd
