@@ -34,7 +34,7 @@ All the `.vim` files should be well-commented, so have a look. Note that `init.v
 ## Go Development
 1. [vim-for-go-developement](https://pmihaylov.com/vim-for-go-development/)
    ```
-   vim -c 'CocInstall -sync coc-go coc-html coc-css coc-json|q'
+   vim -c 'CocInstall -sync coc-go coc-html coc-css coc-json |q'
    ```
 
 

@@ -50,6 +50,9 @@ elseif v:progname == 'nvim'
   Plug 'sheerun/vimrc'
   Plug 'sheerun/vim-polyglot'
 
+  " Executes many different tools to execute tests.
+  Plug 'vim-test/vim-test'
+
   " Undo sheerun settings
   " I don't like the mouse to change my cursor position when I click from application to application
   set mouse=""
