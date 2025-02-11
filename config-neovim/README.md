@@ -18,6 +18,9 @@ ln -s ~/.config/nvim ~/.vim
 ln -s ~/.config/nvim/init.vim ~/.vimrc
 ```
 
+# VIM Plugins
+* `vim-test` was successful runn
+
 ## Config
 All the `.vim` files should be well-commented, so have a look. Note that `init.vim` (aka `.vimrc`) has the "potentially dangerous" command section at the bottom.
 
@@ -25,10 +28,13 @@ All the `.vim` files should be well-commented, so have a look. Note that `init.v
 1. `vim tmp.txt` should download all the plugins
 1. `:PlugUpdate` to verify
 
+# [CoC](https://github.com/neoclide/coc.nvim)
+Conquer of Completion. LSP integration for Neovim.
+
 ## Common
 `coc-json` is used to get syntax help while updating coc-settings.json
    ```
-   :CocInstall coc-json
+   :CocInstall coc-json coc-sh
    ```
 
 ## Go Development
