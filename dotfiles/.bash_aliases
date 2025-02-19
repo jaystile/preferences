@@ -8,3 +8,10 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias eclipse='/opt/eclipse/eclipse &'
 alias vpn='sudo openfortivpn 01d-ravpn.udev-caci.com:8443 -u stilesj'
+
+if command -v nvim 2>&1 >/dev/null
+then
+   alias vi='nvim'
+   alias vim='nvim'
+   alias oldvim='\nvim'
+fi

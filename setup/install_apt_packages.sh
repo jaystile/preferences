@@ -5,4 +5,5 @@ sudo apt update # get the latest packages
 sudo apt install -y \
 	shellcheck \
 	ripgrep \
-	xsel 
+	xsel \
+	fonts-noto-color-emoji
