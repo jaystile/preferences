@@ -18,6 +18,8 @@ function unpack() {
 	# extract and link the tar file
 	sudo tar -zxvf syncthing-linux-${ARCH}-${VERSION_TAG}.tar.gz
 	sudo ln -fs syncthing-linux-${ARCH}-${VERSION_TAG} syncthing
+	sudo chown -R root:root syncthing-linux-${ARCH}-${VERSION_TAG} 
+	sudo rm syncthing-linux-${ARCH}-${VERSION_TAG}
 	
 }
 
