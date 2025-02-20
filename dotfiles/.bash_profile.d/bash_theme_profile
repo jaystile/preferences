@@ -1,0 +1,4 @@
+THEME="/home/${USER}/.bash/themes/aphrodite/aphrodite.theme.sh"
+if test -e "$THEME"; then
+	source $THEME
+fi
