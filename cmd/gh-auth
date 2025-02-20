@@ -1,0 +1,5 @@
+# Can add credentials to gh cli. It can be used multiple times for different accounts.
+gh auth login
+
+# Switch the active logged in user
+gh auth switch
