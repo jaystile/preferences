@@ -1,0 +1,6 @@
+# Start the ssh-agent and add a key
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/<key>
+
+# Stop the ssh-agent
+ssh-agent -k
