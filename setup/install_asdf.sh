@@ -21,7 +21,10 @@ function download() {
 
 function unpack() {
 	# There is only a single file, so we'll put it in the local bin
-	sudo tar -zxvf ${TAR_FILE} -C /usr/local/bin/
+	sudo mkdir -p /opt/asdf/bin
+	sudo mkdir -p /opt/asdf/data
+	sudo chown -R ${USER}:users /opt/asdf
+	tar -zxvf ${TAR_FILE} -C /opt/asdf/bin/
 	sudo rm ${TAR_FILE}
 }
 

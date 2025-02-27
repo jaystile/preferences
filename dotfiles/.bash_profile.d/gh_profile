@@ -1,5 +1,5 @@
 #####################
-# Syncthing
+# gh
 #####################
 export PATH=/opt/gh/bin:${PATH}
 eval "$(gh completion -s bash)"

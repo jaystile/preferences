@@ -13,6 +13,9 @@ sudo apt install -y \
     tk-dev \
     libpq-dev
 
+# phoenix framework dependencies
+supo apt install -y inotify-tools
+
 # personal preferences
 sudo apt install -y \
     postgresql-client \

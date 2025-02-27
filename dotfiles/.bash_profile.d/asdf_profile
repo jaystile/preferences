@@ -1,0 +1,9 @@
+#####################
+# asdf
+#####################
+export PATH=/opt/asdf/bin:${PATH}
+eval "$(asdf completion bash)"
+
+# override where the data dir lives.
+export ASDF_DATA_DIR=/opt/asdf/data
+export PATH="${ASDF_DATA_DIR}/shims:$PATH"
