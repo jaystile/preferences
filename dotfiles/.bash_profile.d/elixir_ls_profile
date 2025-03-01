@@ -1,0 +1,5 @@
+###
+# configure elixir language server
+###
+alias elixir-ls='/opt/elixir-ls/release/language_server.sh'
+
