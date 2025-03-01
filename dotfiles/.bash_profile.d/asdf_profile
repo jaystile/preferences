@@ -5,5 +5,6 @@ export PATH=/opt/asdf/bin:${PATH}
 eval "$(asdf completion bash)"
 
 # override where the data dir lives.
-export ASDF_DATA_DIR=/opt/asdf/data
-export PATH="${ASDF_DATA_DIR}/shims:$PATH"
+# I did want this called ASDF_DATA_DIR but elixir-ls makes assumptions that is it called $ASDF_DIR
+export ASDF_DIR=/opt/asdf/data
+export PATH="${ASDF_DIR}/shims:$PATH"

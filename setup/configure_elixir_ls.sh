@@ -6,9 +6,13 @@ then
     exit 1
 fi
 
-pushd /opt/elixir-ls/
-mix deps.get
-MIX_ENV=prod mix compile
-MIX_ENV=prod mix elixir_ls.release2 -o release
-popd
+function build() {\
+    pushd /opt/elixir-ls/
+    mix deps.get
+    MIX_ENV=prod mix compile
+    MIX_ENV=prod mix elixir_ls.release2 -o release
+    popd
+}
+
+build
 
