@@ -1,6 +1,9 @@
 ################################################################################
 # NPM Configuration
 ################################################################################
-export NPM_GLOBAL_MODULES="$HOME/node_modules/.bin"
-export PATH="${NPM_GLOBAL_MODULES}:${PATH}"
+CMD=npm
+if command -v ${CMD} 2>&1 >/dev/null; then
+  export NPM_GLOBAL_MODULES="$(npm get prefix -g)"
+  export PATH="${NPM_GLOBAL_MODULES}/bin:${PATH}"
+fi
 
