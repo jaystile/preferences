@@ -9,3 +9,4 @@ fi
 
 # Installs tools into ~/node_modules/bin
 ${CMD} install prettier -g
+${CMD} install jsonlint -g
