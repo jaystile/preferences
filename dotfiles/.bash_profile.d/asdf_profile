@@ -1,12 +1,21 @@
 #####################
 # asdf
 #####################
-export PATH=/opt/asdf/bin:${PATH}
-eval "$(asdf completion bash)"
 
-# override where the data dir lives.
-export ASDF_DATA_DIR=/opt/asdf/data
+CMD=asdf
+if command -v /opt/asdf/bin/${CMD} 2>&1 >/dev/null; then
+	export PATH=/opt/asdf/bin:${PATH}
 
-# I did want this called ASDF_DATA_DIR but elixir-ls makes assumptions that is it called $ASDF_DIR
-export ASDF_DIR=/opt/asdf/data
-export PATH="${ASDF_DIR}/shims:$PATH"
+	# override where the data dir lives.
+	export ASDF_DATA_DIR=/opt/asdf/data
+
+	# I did want this called ASDF_DATA_DIR but elixir-ls makes assumptions that is it called $ASDF_DIR
+	export ASDF_DIR=/opt/asdf/data
+	export PATH="${ASDF_DIR}/shims:$PATH"
+
+	eval "$(asdf completion bash)"
+else
+  echo "asdf is not installed. Try install_asdh.sh?"
+fi
+
+

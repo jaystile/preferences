@@ -6,6 +6,8 @@ then
     exit 1
 fi
 
+asdf plugin add erlang
+asdf plugin add elixir
 asdf install erlang 27.2.4
 asdf set -u erlang 27.2.4
 asdf install elixir 1.18.2-otp-27

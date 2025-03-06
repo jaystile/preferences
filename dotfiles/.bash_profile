@@ -23,3 +23,4 @@ export PATH="$LOCAL_BIN:$PATH"
 for profile in ~/.bash_profile.d/*; do
     . "$profile"
 done
+. "$HOME/.cargo/env"
