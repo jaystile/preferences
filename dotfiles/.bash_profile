@@ -2,7 +2,7 @@
 if [ -n "$BASH_VERSION" -a -n "$PS1" ]; then
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
-    . "$HOME/.bashrc"
+        . "$HOME/.bashrc"
     fi
 fi
 
@@ -17,9 +17,9 @@ export EDITOR=nvim
 
 # Include local bin directory for custom scripts
 LOCAL_BIN=/home/$USER/bin
+export PATH="$LOCAL_BIN:$PATH"
 
 # Load application specific profiles
-for profile in ~/.bash_profile.d/* ; do
-    . $profile
+for profile in ~/.bash_profile.d/*; do
+    . "$profile"
 done
-
