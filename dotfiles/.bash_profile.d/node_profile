@@ -1,2 +1,0 @@
-NODE_HOME=/home/$USER/node
-export PATH=${NODE_HOME}/bin:${PATH}
