@@ -39,6 +39,11 @@ set-window-option -g mode-keys vi
 # easy-to-remember split pane commands
 #bind | split-window -h
 #bind - split-window -v
+
+# When splitting use the current path
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+
 #unbind '"'
 #unbind %
 
@@ -139,10 +144,20 @@ set-option -g bell-action none
 # }
 # The panes {
 
+
+# I don't think this is doing anything.
+#set -g pane-border-fg black
+#set -g pane-active-border-fg brightred
+
+# pane
+set -g pane-border-style 'fg=red'
+set -g pane-active-border-style 'fg=yellow'
+
 #set -g pane-border-bg colour235
 #set -g pane-border-fg colour238
 #set -g pane-active-border-bg colour236
 #set -g pane-active-border-fg colour51
+
 
 # }
 # The statusbar {
