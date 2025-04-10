@@ -25,6 +25,9 @@ set -g history-limit 4096
 # enable vi mode for scrolling output
 set-window-option -g mode-keys vi
 
+# disable the automatic rename
+set-window-option -g allow-rename off
+
 # use vi mode
 #set -g status-keys vi
 

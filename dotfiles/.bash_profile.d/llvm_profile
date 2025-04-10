@@ -1,0 +1,12 @@
+#####################
+# LLVM
+#####################
+
+CMD=lldb
+if command -v /opt/llvm/bin/${CMD} 2>&1 >/dev/null; then
+	export PATH=/opt/llvm/bin:${PATH}
+else
+  echo "llvm is not installed. Try install_llvm_llvm-dap.sh?"
+fi
+
+
