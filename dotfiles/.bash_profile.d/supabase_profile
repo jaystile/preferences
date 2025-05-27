@@ -1,0 +1,5 @@
+#################################################
+# Supabase 
+#################################################
+export SUPABASE_HOME=/opt/supabase
+export PATH=${PATH}:${SUPABASE_HOME}/
