@@ -18,6 +18,8 @@ bind r source-file ~/.tmux.conf
 # Note: scrollback gets multiplied by the number of windows and could cause a memory issue
 set -g history-limit 4096
 
+# set allow-rename off
+set-window-option -g allow-rename off
 
 # allow terminal scrolling
 #set-option -g terminal-overrides 'xterm*:smcup@:rmcup@'
