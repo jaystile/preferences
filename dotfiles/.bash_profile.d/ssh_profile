@@ -1,0 +1,7 @@
+if [ ! -S "$HOME/.ssh/ssh-agent.sock" ]; then
+    # Start ssh-agent and redirect its socket to a fixed location
+    eval "$(ssh-agent -a $HOME/.ssh/ssh-agent.sock)" > /dev/null
+fi
+export SSH_AUTH_SOCK=$HOME/.ssh/ssh-agent.sock
+
+# call `ssh-add` to add a key to all terminals
