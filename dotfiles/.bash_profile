@@ -24,3 +24,5 @@ for profile in ~/.bash_profile.d/*; do
     . "$profile"
 done
 . "$HOME/.cargo/env"
+
+. "$HOME/.local/bin/env"
