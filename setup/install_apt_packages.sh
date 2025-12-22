@@ -19,6 +19,10 @@ supo apt install -y inotify-tools
 # plantuml dependencies
 sudo apt install -y graphviz
 
+# For uv & python autoactivation
+sudo apt install -y \
+  direnv
+
 # personal preferences
 sudo apt install -y \
   postgresql-client \
