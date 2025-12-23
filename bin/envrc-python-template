@@ -1,25 +1,19 @@
 # --- .envrc ---
-if [ -f .python-version ]; then
-  PY_VER="$(cat .python-version)"
-else
-  PY_VER="3.13"
-fi
+
 if ! command -v uv >/dev/null 2>&1; then
   echo "ERROR: uv not found. Install uv first." >&2
   exit 1
 fi
-uv python install "$PY_VER"
-if [ ! -d .venv ]; then
-  uv venv --python "$PY_VER"
-fi
+
+# Install UV if it does not exit.
 PATH_add ".venv/bin"
 export VIRTUAL_ENV="$PWD/.venv"
 watch_file pyproject.toml
 watch_file uv.lock
 if [ -f uv.lock ]; then
-  uv sync --frozen || uv sync
+  uv sync --frozen || uv sync --dev
 else
-  uv sync
+  uv sync --dev
 fi
 
 # Add any environment specific variables here.
