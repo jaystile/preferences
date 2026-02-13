@@ -4,6 +4,6 @@
 CMD=supabase
 if command -v /opt/supabase/${CMD} 2>&1 >/dev/null; then
 	export SUPABASE_HOME=/opt/supabase
-	export PATH=${PATH}:${SUPABASE_HOME}/
+	export PATH=${PATH}:${SUPABASE_HOME}
 	alias sb=supabase
 fi
