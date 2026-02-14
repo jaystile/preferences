@@ -1,0 +1,7 @@
+CMD=aws
+if command -v /opt/awscli/bin/${CMD} 2>&1 >/dev/null; then
+	export PATH=/opt/awscli/bin:${PATH}
+else
+  echo "aws is not installed. Try install_awscli.sh?"
+fi
+
