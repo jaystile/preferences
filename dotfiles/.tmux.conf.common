@@ -8,6 +8,8 @@
 # screen mode
 set -g default-terminal "screen-256color"
 
+# when a client attaches, refresh the ssh socket
+set -g update-environment "SSH_AUTH_SOCK"
 
 # source config file
 bind r source-file ~/.tmux.conf
