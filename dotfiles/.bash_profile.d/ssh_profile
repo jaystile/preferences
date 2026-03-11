@@ -1,12 +1,21 @@
-export SSH_AUTH_SOCK="$HOME/.ssh/ssh-agent.sock"
+# If Keeper Security's ssh-agent socket exists, use that and exit
+if [ -x /snap/bin/keepersecurity ] \
+    && [ -S "/home/jason/snap/keepersecurity/14/.config/Keeper Password Manager/keeper-ssh-agent.sock" ]; then
+    export SSH_AUTH_SOCK='/home/jason/snap/keepersecurity/14/.config/Keeper Password Manager/keeper-ssh-agent.sock'
+else
 
-# Start agent if not running
-if ! ssh-add -l >/dev/null 2>&1; then
-    if [ -S "$SSH_AUTH_SOCK" ]; then
-        rm -f "$SSH_AUTH_SOCK"
+    # Fallback to keys-on-host behavior
+    export SSH_AUTH_SOCK="$HOME/.ssh/ssh-agent.sock"
+
+    # Start agent if not running
+    if ! ssh-add -l >/dev/null 2>&1; then
+        if [ -S "$SSH_AUTH_SOCK" ]; then
+            rm -f "$SSH_AUTH_SOCK"
+        fi
+
+        eval "$(ssh-agent -a $SSH_AUTH_SOCK)" >/dev/null
+        ssh-add ~/.ssh/id_rsa
     fi
-
-    eval "$(ssh-agent -a $SSH_AUTH_SOCK)" >/dev/null
-    ssh-add ~/.ssh/id_rsa
 fi
+
 
